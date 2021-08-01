@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import { JournalsWrapper } from "../context/journalsContext";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <JournalsWrapper>
+      <Component {...pageProps} />
+    </JournalsWrapper>
+  );
 }
 
-export default MyApp
+export default MyApp;
