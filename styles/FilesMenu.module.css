@@ -1,0 +1,30 @@
+.filesContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1032px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.fileCard {
+  width: 225px;
+  height: 300px;
+  margin: 0 16px 30px 16px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.fileCardInfo p {
+  margin: 5px 10px 5px 0;
+}
+
+.fileCardImage {
+  width: 225px;
+  height: 180px;
+}
+
+.fileCardActions {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin-top: 15px;
+}

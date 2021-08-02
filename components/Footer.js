@@ -11,17 +11,23 @@ export default function Footer() {
     <div className={styles.footerContainer}>
       <div>
         <Link href="#">
-          <Image src={fb} alt="fb" />
+          <div>
+            <Image src={fb} alt="fb" />
+          </div>
         </Link>
       </div>
       <div>
         <Link href="#">
-          <Image src={instagram} alt="instagram" />
+          <div>
+            <Image src={instagram} alt="instagram" />
+          </div>
         </Link>
       </div>
       <div>
         <Link href="#">
-          <Image src={wp} alt="wp" />
+          <div>
+            <Image src={wp} alt="wp" />
+          </div>
         </Link>
       </div>
     </div>
