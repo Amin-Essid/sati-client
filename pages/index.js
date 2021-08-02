@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import { useJournalsContext } from "../context/journalsContext";
 import axios from "axios";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home({ data }) {
   // const { journals, setJournals } = useJournalsContext();
@@ -14,6 +15,7 @@ export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Header />
+      <Footer />
     </div>
   );
 }

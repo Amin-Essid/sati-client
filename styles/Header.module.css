@@ -16,6 +16,7 @@
 .headerLogo {
   height: 65px;
   width: 80px;
+  cursor: pointer;
 }
 
 .headerNav {
@@ -28,6 +29,7 @@
 
 .headerMobileNavIcon {
   display: none;
+  cursor: pointer;
 }
 
 .closedHeaderMobileNav {
@@ -35,14 +37,7 @@
 }
 
 .openHeaderMobileNav {
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-  width: 100%;
-  background-color: #0aa96c;
-  justify-content: space-around;
-  color: white;
-  align-items: center;
+  display: none;
 }
 
 @media (max-width: 880px) {
@@ -63,5 +58,21 @@
   .headerMobileNavIcon {
     display: flex;
     align-items: center;
+  }
+
+  .openHeaderMobileNav {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    background-color: #0aa96c;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+  }
+
+  .openHeaderMobileNav div {
+    width: 150px;
+    margin-right: 100px;
   }
 }

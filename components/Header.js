@@ -23,14 +23,14 @@ const links = [
 export default function Header() {
   const [mobileMode, setMobileMode] = useState(false);
   const nav = links.map((link, index) => (
-    <Link key={index} href="">
+    <Link key={index} href={link.url}>
       {link.name}
     </Link>
   ));
   const mobileNav = links.map((link, index) => (
-    <Link key={index} href="">
-      {link.name}
-    </Link>
+    <div key={index}>
+      <Link href={link.url}>{link.name}</Link>
+    </div>
   ));
   return (
     <div className={styles.headerLargeContainer}>
@@ -46,7 +46,11 @@ export default function Header() {
             alt="mobile Nav Icon"
           />
         </div>
-        <div>
+        <div
+          style={{
+            cursor: "pointer",
+          }}
+        >
           <Image src={Shop} alt="shop" />
         </div>
       </div>
