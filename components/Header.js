@@ -44,9 +44,11 @@ export default function Header() {
   return (
     <div className={styles.headerLargeContainer}>
       <div className={styles.headerContainer}>
-        <div className={styles.headerLogo}>
-          <Image src={Logo} alt="logo" />
-        </div>
+        <Link href="/">
+          <div className={styles.headerLogo}>
+            <Image src={Logo} alt="logo" />
+          </div>
+        </Link>
         <div className={styles.headerNav}>{nav}</div>
         <div className={styles.headerMobileNavIcon}>
           <Image

@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function BuyButton({ file }) {
   const { checkShopFiles, updateShopFiles } = useShopContext();
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(checkShopFiles(file));
   let text = !checked ? "أضف إلى مشترياتي" : "إحذف من مشترياتي";
   let color = !checked ? "#0aa96c" : "#89A198";
   return (
@@ -14,6 +14,7 @@ export default function BuyButton({ file }) {
       className={styles.fileCardActions}
       style={{
         backgroundColor: color,
+        cursor: "pointer",
       }}
       onClick={() => {
         updateShopFiles(file);
