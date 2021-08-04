@@ -1,7 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { useJournalsContext } from "../context/journalsContext";
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -14,7 +11,10 @@ export default function Home({ data }) {
   // console.log(journals);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ position: "relative", minHeight: "100vh" }}
+    >
       <Header />
       <HomeContainer allFiles={data} />
       <Footer />

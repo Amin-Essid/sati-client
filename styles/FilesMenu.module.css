@@ -3,14 +3,16 @@
   width: 100%;
   max-width: 1032px;
   margin: 0 auto;
+  padding-bottom: 60px;
   flex-wrap: wrap;
 }
 
 .fileCard {
   width: 225px;
-  height: 300px;
+  height: 328px;
   margin: 0 16px 30px 16px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
 }
 
 .fileCardInfo p {
@@ -24,6 +26,7 @@
 
 .fileCardActions {
   display: flex;
+  /* background-color: #0aa96c; */
   justify-content: space-between;
   height: 50px;
   margin-top: 15px;

@@ -1,11 +1,11 @@
 import "../styles/globals.css";
-import { JournalsWrapper } from "../context/journalsContext";
+import { ShopWrapper } from "../context/shop";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <JournalsWrapper>
+    <ShopWrapper>
       <Component {...pageProps} />
-    </JournalsWrapper>
+    </ShopWrapper>
   );
 }
 
