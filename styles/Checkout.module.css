@@ -1,0 +1,28 @@
+.checkoutContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.checkoutFile {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  padding: 5px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkoutFile h1 {
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.checkoutActions {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}

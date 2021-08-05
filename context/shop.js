@@ -5,6 +5,7 @@ const shopContext = createContext();
 export function ShopWrapper({ children }) {
   const [shopFiles, setShopFiles] = useState([]);
   const [shopFilesCount, setShopFilesCount] = useState(0);
+  const [showButtons, setShowButtons] = useState(false);
 
   const checkShopFiles = (file) => {
     let files = shopFiles;
@@ -22,6 +23,7 @@ export function ShopWrapper({ children }) {
     } else {
       files.push(file);
       setShopFilesCount(shopFilesCount + 1);
+      setShowButtons(true);
     }
     // console.log(files);
     setShopFiles(files);
@@ -31,7 +33,14 @@ export function ShopWrapper({ children }) {
   // const getShopFiles = () => shopFiles;
   return (
     <shopContext.Provider
-      value={{ checkShopFiles, updateShopFiles, shopFiles, shopFilesCount }}
+      value={{
+        checkShopFiles,
+        updateShopFiles,
+        shopFiles,
+        shopFilesCount,
+        showButtons,
+        setShowButtons,
+      }}
     >
       {children}
     </shopContext.Provider>

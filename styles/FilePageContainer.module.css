@@ -14,6 +14,7 @@
   width: 400px;
   height: auto;
   margin-bottom: 60px;
+  direction: ltr;
   /* max-width: 500px;
   max-height: 500px; */
 }

@@ -10,7 +10,7 @@ import { useShopContext } from "../context/shop";
 const links = [
   {
     name: "الأدوات البيداغوجية",
-    url: "#",
+    url: "/",
   },
   {
     name: "إنظم إلينا",
@@ -57,30 +57,33 @@ export default function Header() {
             alt="mobile Nav Icon"
           />
         </div>
-        <div
-          style={{
-            cursor: "pointer",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <Link href="/checkout">
           <div
             style={{
-              color: "white",
-              backgroundColor: "red",
-              width: "25px",
-              height: "25px",
-              textAlign: "center",
-              marginLeft: "5px",
-              borderRadius: "50%",
+              cursor: "pointer",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            {shopFilesCount}
+            <div
+              style={{
+                color: "white",
+                backgroundColor: "red",
+                width: "25px",
+                height: "25px",
+                textAlign: "center",
+                marginLeft: "5px",
+                borderRadius: "50%",
+              }}
+            >
+              {shopFilesCount}
+            </div>
+            <Image src={Shop} alt="shop" />
           </div>
-          <Image src={Shop} alt="shop" />
-        </div>
+        </Link>
       </div>
+
       <div
         className={
           mobileMode ? styles.openHeaderMobileNav : styles.closedHeaderMobileNav

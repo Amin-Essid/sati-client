@@ -19,6 +19,7 @@ export default function BuyButton({ file }) {
       onClick={() => {
         updateShopFiles(file);
         setChecked(checkShopFiles(file));
+        // setShowButtons(true);
       }}
     >
       <div

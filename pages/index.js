@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HomeContainer from "../components/HomeContainer";
+import CheckPopup from "../components/CheckPopup";
 
 export default function Home({ data }) {
   // const { journals, setJournals } = useJournalsContext();
@@ -17,6 +18,7 @@ export default function Home({ data }) {
     >
       <Header />
       <HomeContainer allFiles={data} />
+      <CheckPopup />
       <Footer />
     </div>
   );
