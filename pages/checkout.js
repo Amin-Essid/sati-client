@@ -33,8 +33,6 @@ export default function CheckouOut() {
     );
   });
 
-  const filesLength = 133 + 84 * shopFiles.length;
-  console.log(filesLength);
   return (
     <div>
       <Header />
