@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Filter from "./Filter";
 import FilesMenu from "./FilesMenu";
+import CheckPopup from "../components/CheckPopup";
 
 export default function HomeContainer({ allFiles }) {
   const [files, setFiles] = useState(allFiles);
@@ -12,6 +13,7 @@ export default function HomeContainer({ allFiles }) {
     <div>
       <Filter setType={setType} setJLevel={setJLevel} setSubject={setSubject} />
       <FilesMenu filtredFiles={filtredFiles} />
+      <CheckPopup />
     </div>
   );
 }

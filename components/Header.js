@@ -14,7 +14,7 @@ const links = [
   },
   {
     name: "إنظم إلينا",
-    url: "#",
+    url: "/join",
   },
   {
     name: "إتصل بنا",

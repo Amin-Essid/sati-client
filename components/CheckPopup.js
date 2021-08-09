@@ -55,16 +55,15 @@ export default function CheckPopup() {
               إتمام الشراء
             </div>
           )}
-          <Link href={`/`}>
-            <div
-              onClick={() => {
-                setShowButtons(false);
-              }}
-              style={btnStyle}
-            >
-              مواصلة التسوّق
-            </div>
-          </Link>
+
+          <div
+            onClick={() => {
+              setShowButtons(false);
+            }}
+            style={btnStyle}
+          >
+            مواصلة التسوّق
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import styles from "../styles/FilePageContainer.module.css";
 import BuyButton from "./BuyButton";
 import ImageGallery from "react-image-gallery";
+import CheckPopup from "../components/CheckPopup";
 
 export default function FilePageContainer({ file }) {
   let images = file.images.map((IMG) => ({
@@ -35,6 +36,7 @@ export default function FilePageContainer({ file }) {
           thumbnailWidth="50px"
         />
       </div>
+      <CheckPopup />
     </div>
   );
 }

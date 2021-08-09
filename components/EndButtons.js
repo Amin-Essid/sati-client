@@ -2,7 +2,7 @@ import { useShopContext } from "../context/shop";
 import Link from "next/link";
 import styles from "../styles/Checkout.module.css";
 
-export default function EndButtons() {
+export default function EndButtons({ setFinish }) {
   const { shopFiles, setShowButtons } = useShopContext();
   console.log(shopFiles);
 
@@ -22,7 +22,11 @@ export default function EndButtons() {
 
   return (
     <div className={styles.checkoutActions}>
-      {shopFiles.length > 0 && <div style={btnStyle}>إتمام الشراء</div>}
+      {shopFiles.length > 0 && (
+        <div style={btnStyle} onClick={() => setFinish(true)}>
+          إتمام الشراء
+        </div>
+      )}
       <Link href={`/`}>
         <div style={btnStyle}>مواصلة التسوّق</div>
       </Link>

@@ -1,0 +1,60 @@
+.acheterForm {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.AcheterInputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.AcheterInput {
+  font-size: 16px;
+  /* width: 310px; */
+  display: flex;
+  justify-content: space-between;
+}
+.AcheterInput input {
+  /* margin-right: 5px; */
+  width: 200px;
+  height: 30px;
+  box-shadow: none;
+  border-color: #0aa96c;
+  margin-bottom: 30px;
+}
+
+.AcheterInput label {
+  min-width: 100px;
+}
+
+.AcheterSubmit {
+  margin-left: 30px;
+  color: white;
+  width: 170px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #0aa96c;
+  cursor: pointer;
+  border: none;
+  margin: 20px auto;
+}
+
+.fileInput {
+  display: block;
+  margin-top: 10px;
+}
+
+.formError {
+  text-align: center;
+  color: red;
+  font-weight: 600;
+
+  padding-bottom: 10px;
+}
