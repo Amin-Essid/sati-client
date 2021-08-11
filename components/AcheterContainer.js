@@ -1,13 +1,14 @@
 import { Formik, Form } from "formik";
 import styles from "../styles/AcheterContainer.module.css";
 import { useState } from "react";
-import { useRouter } from "next/router";
 import Input from "./inputs/Input";
+import buy from "../utils/buy";
+import { useRouter } from "next/router";
 
-export default function AcheterContainer() {
+export default function AcheterContainer({ boughtFiles }) {
   const [formError, setFormError] = useState("");
-
   const router = useRouter();
+
   return (
     <div>
       <Formik
@@ -20,8 +21,9 @@ export default function AcheterContainer() {
           address: "",
           number: "",
           email: "",
+          files: boughtFiles,
         }}
-        onSubmit={async (values, { resetForm }) => {
+        onSubmit={async (values) => {
           setFormError("");
           const {
             firstName,
@@ -32,6 +34,7 @@ export default function AcheterContainer() {
             address,
             number,
             email,
+            files,
           } = values;
           if (
             firstName != "" &&
@@ -43,10 +46,22 @@ export default function AcheterContainer() {
             number != "" &&
             email != ""
           ) {
-            // await postComment(comment, user.uid, suggestion);
-            // resetForm({});
-            // refreshData();
-            console.log(values);
+            let result = await buy({
+              firstName,
+              lastName,
+              code,
+              province,
+              city,
+              address,
+              number,
+              email,
+              files,
+            });
+            console.log(result);
+            if (result) {
+              router.push("/success");
+            }
+            router.push("/error");
           } else {
             setFormError(`الرجاء اكمال ادخال كل البيانات الخاصة بك`);
             console.log("aasba");

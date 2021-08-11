@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Input from "../components/inputs/Input";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import sell from "../utils/sell";
 
 export default function join() {
   const [formError, setFormError] = useState("");
@@ -41,6 +42,9 @@ export default function join() {
               number,
               email,
               description,
+              // fileOne,
+              // fileTwo,
+              // fileThree,
             } = values;
             if (
               firstName != "" &&
@@ -53,10 +57,25 @@ export default function join() {
               email != "" &&
               description != ""
             ) {
-              // await postComment(comment, user.uid, suggestion);
-              // resetForm({});
-              // refreshData();
-              console.log(values);
+              let result = await sell({
+                firstName,
+                lastName,
+                code,
+                province,
+                city,
+                address,
+                number,
+                email,
+                description,
+                // fileOne,
+                // fileTwo,
+                // fileThree,
+              });
+              console.log(result);
+              if (result) {
+                router.push("/success");
+              }
+              router.push("/error");
             } else {
               setFormError(`الرجاء اكمال ادخال كل البيانات الخاصة بك`);
               console.log("aasba");
@@ -157,6 +176,7 @@ export default function join() {
                     rows="4"
                     cols="55"
                     id="description"
+                    onChange={handleChange}
                     style={{
                       borderColor: "#0aa96c",
                       marginRight: "5px",
@@ -164,7 +184,7 @@ export default function join() {
                   ></textarea>
                 </div>
               </div>
-              <div style={{ marginTop: "20px" }}>
+              {/* <div style={{ marginTop: "20px" }}>
                 <label>الرجاء تحميل العمل الذي تريد عرضه او عينة منه:</label>
                 <input
                   className={styles.fileInput}
@@ -197,7 +217,7 @@ export default function join() {
                     }}
                   />
                 ) : null}
-              </div>
+              </div> */}
               <button type="submit" className={styles.AcheterSubmit}>
                 ارسال
               </button>

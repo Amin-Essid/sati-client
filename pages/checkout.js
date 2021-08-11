@@ -52,7 +52,7 @@ export default function CheckouOut() {
             </div>
           )}
           {!finish && <EndButtons setFinish={setFinish} />}
-          {finish && <AcheterContainer />}
+          {finish && <AcheterContainer boughtFiles={shopFiles} />}
         </div>
       </div>
 
