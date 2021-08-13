@@ -10,7 +10,8 @@ import AcheterContainer from "../components/AcheterContainer";
 import { useState } from "react";
 
 export default function CheckouOut() {
-  const { shopFiles, updateShopFiles } = useShopContext();
+  const { shopFiles, updateShopFiles, setShopFiles, setShopFilesCount } =
+    useShopContext();
   const [finish, setFinish] = useState(false);
   let toatalPrice = 0;
   console.log(shopFiles);
@@ -52,7 +53,13 @@ export default function CheckouOut() {
             </div>
           )}
           {!finish && <EndButtons setFinish={setFinish} />}
-          {finish && <AcheterContainer boughtFiles={shopFiles} />}
+          {finish && (
+            <AcheterContainer
+              boughtFiles={shopFiles}
+              setShopFiles={setShopFiles}
+              setShopFilesCount={setShopFilesCount}
+            />
+          )}
         </div>
       </div>
 

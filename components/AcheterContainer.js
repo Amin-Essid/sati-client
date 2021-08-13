@@ -5,7 +5,11 @@ import Input from "./inputs/Input";
 import buy from "../utils/buy";
 import { useRouter } from "next/router";
 
-export default function AcheterContainer({ boughtFiles }) {
+export default function AcheterContainer({
+  boughtFiles,
+  setShopFiles,
+  setShopFilesCount,
+}) {
   const [formError, setFormError] = useState("");
   const router = useRouter();
 
@@ -59,9 +63,12 @@ export default function AcheterContainer({ boughtFiles }) {
             });
             console.log(result);
             if (result) {
+              setShopFiles([]);
+              setShopFilesCount(0);
               router.push("/success");
+            } else {
+              router.push("/error");
             }
-            router.push("/error");
           } else {
             setFormError(`الرجاء اكمال ادخال كل البيانات الخاصة بك`);
             console.log("aasba");

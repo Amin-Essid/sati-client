@@ -74,8 +74,9 @@ export default function join() {
               console.log(result);
               if (result) {
                 router.push("/success");
+              } else {
+                router.push("/error");
               }
-              router.push("/error");
             } else {
               setFormError(`الرجاء اكمال ادخال كل البيانات الخاصة بك`);
               console.log("aasba");
