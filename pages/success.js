@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 export default function success() {
   const router = useRouter();
   const btnStyle = {
-    marginLeft: "30px",
+    // marginLeft: "30px",
     color: "white",
     width: "250px",
     height: "50px",
@@ -35,6 +35,8 @@ export default function success() {
           style={{
             fontSize: "20px",
             fontWeight: "700",
+            textAlign: "center",
+            color: "green",
           }}
         >
           <div style={{ marginBottom: "10px" }}>

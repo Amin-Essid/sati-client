@@ -6,29 +6,24 @@ export default function EndButtons({ setFinish }) {
   const { shopFiles, setShowButtons } = useShopContext();
   console.log(shopFiles);
 
-  const btnStyle = {
-    marginLeft: "30px",
-    color: "white",
-    width: "170px",
-    height: "50px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: "18px",
-    fontWeight: "600",
-    backgroundColor: "#0aa96c",
-    cursor: "pointer",
-  };
-
   return (
     <div className={styles.checkoutActions}>
       {shopFiles.length > 0 && (
-        <div style={btnStyle} onClick={() => setFinish(true)}>
+        <div
+          // style={btnStyle}
+          className={styles.endBtnStyle}
+          onClick={() => setFinish(true)}
+        >
           إتمام الشراء
         </div>
       )}
       <Link href={`/`}>
-        <div style={btnStyle}>مواصلة التسوّق</div>
+        <div
+          //  style={btnStyle}
+          className={styles.endBtnStyle}
+        >
+          مواصلة التسوّق
+        </div>
       </Link>
     </div>
   );

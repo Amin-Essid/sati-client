@@ -17,7 +17,7 @@ const links = [
     url: "/join",
   },
   {
-    name: "إتصل بنا",
+    name: "23851391",
     url: "#",
   },
 ];

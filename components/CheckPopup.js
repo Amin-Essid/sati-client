@@ -5,19 +5,6 @@ import { useRouter } from "next/router";
 
 export default function CheckPopup() {
   const router = useRouter();
-  const btnStyle = {
-    marginLeft: "30px",
-    color: "white",
-    width: "170px",
-    height: "50px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: "18px",
-    fontWeight: "600",
-    backgroundColor: "#0aa96c",
-    cursor: "pointer",
-  };
 
   const { showButtons, setShowButtons, shopFiles } = useShopContext();
   let popupClass = styles.overlay_hidden;
@@ -50,7 +37,8 @@ export default function CheckPopup() {
                 setShowButtons(false);
                 router.push("/checkout");
               }}
-              style={btnStyle}
+              // style={btnStyle}
+              className={styles.popupBtnStyle}
             >
               إتمام الشراء
             </div>
@@ -60,7 +48,8 @@ export default function CheckPopup() {
             onClick={() => {
               setShowButtons(false);
             }}
-            style={btnStyle}
+            // style={btnStyle}
+            className={styles.popupBtnStyle}
           >
             مواصلة التسوّق
           </div>

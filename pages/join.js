@@ -174,7 +174,7 @@ export default function join() {
                     placeholder=""
                     name="description"
                     rows="4"
-                    cols="55"
+                    cols="47"
                     id="description"
                     onChange={handleChange}
                     style={{
