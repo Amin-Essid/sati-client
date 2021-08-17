@@ -7,7 +7,7 @@ export default function FileCard({ file }) {
   return (
     <div className={styles.fileCard}>
       <Link href={`/files/${file._id}`}>
-        <section>
+        <section className={styles.fileCardContainer}>
           <div className={styles.fileCardImage}>
             <img
               src={`${process.env.NEXT_PUBLIC_API_URL}/public/${file.images[0]}.png`}

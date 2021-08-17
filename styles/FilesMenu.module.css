@@ -25,6 +25,12 @@
   height: 180px;
 }
 
+.fileCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .fileCardActions {
   display: flex;
   /* background-color: #0aa96c; */

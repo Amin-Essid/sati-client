@@ -4,3 +4,9 @@
   margin: 50px 0;
   flex-wrap: wrap;
 }
+
+@media (max-width: 700px) {
+  .FilterContainer label {
+    margin-top: 15px;
+  }
+}

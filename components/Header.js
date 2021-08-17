@@ -75,6 +75,9 @@ export default function Header() {
                 textAlign: "center",
                 marginLeft: "5px",
                 borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               {shopFilesCount}
