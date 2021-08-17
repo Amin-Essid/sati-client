@@ -5,8 +5,8 @@ import CheckPopup from "../components/CheckPopup";
 
 export default function FilePageContainer({ file }) {
   let images = file.images.map((IMG) => ({
-    original: `http://localhost:5000/public/${IMG}.jpg`,
-    thumbnail: `http://localhost:5000/public/${IMG}.jpg`,
+    original: `${process.env.NEXT_PUBLIC_API_URL}/public/${IMG}.jpg`,
+    thumbnail: `${process.env.NEXT_PUBLIC_API_URL}/public/${IMG}.jpg`,
   }));
   return (
     <div className={styles.fileContainer}>
