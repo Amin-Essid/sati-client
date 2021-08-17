@@ -29,7 +29,7 @@ export default function Home({ data }) {
 export async function getServerSideProps(context) {
   let journals = [];
   await axios
-    .get(`${process.env.API_URL}/journals`)
+    .get(`${process.env.NEXT_PUBLIC_API_URL}/journals`)
     .then(function (response) {
       // handle success
       journals = response.data;

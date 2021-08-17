@@ -50,17 +50,20 @@ export default function AcheterContainer({
             number != "" &&
             email != ""
           ) {
-            let result = await buy({
-              firstName,
-              lastName,
-              code,
-              province,
-              city,
-              address,
-              number,
-              email,
-              files,
-            });
+            let result = await buy(
+              {
+                firstName,
+                lastName,
+                code,
+                province,
+                city,
+                address,
+                number,
+                email,
+                files,
+              },
+              `${process.env.NEXT_PUBLIC_API_URL}/contact/buy`
+            );
             console.log(result);
             if (result) {
               setShopFiles([]);

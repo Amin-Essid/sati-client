@@ -57,20 +57,23 @@ export default function join() {
               email != "" &&
               description != ""
             ) {
-              let result = await sell({
-                firstName,
-                lastName,
-                code,
-                province,
-                city,
-                address,
-                number,
-                email,
-                description,
-                // fileOne,
-                // fileTwo,
-                // fileThree,
-              });
+              let result = await sell(
+                {
+                  firstName,
+                  lastName,
+                  code,
+                  province,
+                  city,
+                  address,
+                  number,
+                  email,
+                  description,
+                  // fileOne,
+                  // fileTwo,
+                  // fileThree,
+                },
+                `${process.env.NEXT_PUBLIC_API_URL}/contact/sell`
+              );
               console.log(result);
               if (result) {
                 router.push("/success");

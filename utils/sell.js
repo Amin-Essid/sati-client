@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export default async function sell(body) {
+export default async function sell(body, url) {
   let result;
   await axios
-    .post(`${process.env.API_URL}/contact/sell`, body)
+    .post(url, body)
     .then(function (response) {
       // handle success
       console.log("success");

@@ -41,6 +41,7 @@ export function ShopWrapper({ children }) {
         showButtons,
         setShowButtons,
         setShopFiles,
+        setShopFilesCount,
       }}
     >
       {children}

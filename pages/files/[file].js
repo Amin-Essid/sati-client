@@ -19,7 +19,7 @@ export async function getServerSideProps({ params }) {
   console.log(file);
   let fileData;
   await axios
-    .get(`${process.env.API_URL}/journals/${file}`)
+    .get(`${process.env.NEXT_PUBLIC_API_URL}/journals/${file}`)
     .then(function (response) {
       // handle success
       fileData = response.data;
