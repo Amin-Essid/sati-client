@@ -4,7 +4,11 @@ export default function HeadTags({ title, description, image }) {
   return (
     <div>
       <Head>
-        <title>Home</title>
+        <meta
+          name="facebook-domain-verification"
+          content="dzzkbvdz3yfft10cv7fzqfg9d90yan"
+        />
+        <title>sati</title>
         <link rel="icon" href="/logo.png" />
 
         <meta name="description" content={description} />
