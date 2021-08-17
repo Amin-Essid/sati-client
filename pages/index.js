@@ -1,26 +1,24 @@
-// -H 0.0.0.0 -p ${PORT:-8080}
-
 import styles from "../styles/Home.module.css";
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HomeContainer from "../components/HomeContainer";
-// import CheckPopup from "../components/CheckPopup";
+// import Head from "next/head";
+import HeadTags from "../components/HeadTags";
 
 export default function Home({ data }) {
-  // const { journals, setJournals } = useJournalsContext();
-  // setJournals(data);
-  console.log(data);
-  // console.log(journals);
-
   return (
     <div
       className={styles.container}
       style={{ position: "relative", minHeight: "100vh" }}
     >
+      <HeadTags
+        title="sati.tn"
+        description="كل ما يحتاج له المعلم في مكان واحد"
+        image="/logo.png"
+      />
       <Header />
       <HomeContainer allFiles={data} />
-      {/* <CheckPopup /> */}
       <Footer />
     </div>
   );

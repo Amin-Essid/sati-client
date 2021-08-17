@@ -2,11 +2,17 @@ import axios from "axios";
 import FilePageContainer from "../../components/FilePageContainer";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import HeadTags from "../../components/HeadTags";
 
 export default function FilePage({ file }) {
   console.log(file);
   return (
     <div style={{ position: "relative", minHeight: "100vh" }}>
+      <HeadTags
+        title={file.title}
+        description={file.description}
+        image={`${process.env.NEXT_PUBLIC_API_URL}/public/${file.images[0]}.png`}
+      />
       <Header />
       <FilePageContainer file={file} />
       <Footer />
