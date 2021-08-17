@@ -10,14 +10,15 @@ export default function FileCard({ file }) {
         <section>
           <div className={styles.fileCardImage}>
             <img
-              src={`http://localhost:5000/public/${file.images[0]}.jpg`}
+              src={`${process.env.NEXT_PUBLIC_API_URL}/public/${file.images[0]}.png`}
               alt="file image"
               style={{ width: "225px", height: "180px" }}
             />
           </div>
           <div className={styles.fileCardInfo}>
             <p>{file.title}</p>
-            <p>إعداد: {file.author} </p>
+            {/* <p>إعداد: {file.author} </p> */}
+            <p>عدد الأوراق: {file.numberOfPages}</p>
             <p style={{ fontWeight: "bold" }}>الثمن: {file.price} دينار</p>
           </div>
         </section>

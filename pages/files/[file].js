@@ -18,16 +18,22 @@ export async function getServerSideProps({ params }) {
   const { file } = params;
   console.log(file);
   let fileData;
+  // isFile = false;
   await axios
     .get(`${process.env.NEXT_PUBLIC_API_URL}/journals/${file}`)
     .then(function (response) {
       // handle success
+      // isFile = true;
       fileData = response.data;
     })
     .catch(function (error) {
       // handle error
       console.log(error);
     });
+
+  if (!fileData.title) {
+    return { notFound: true };
+  }
   return {
     props: {
       file: fileData,

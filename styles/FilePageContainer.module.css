@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 850px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -24,6 +24,9 @@
 }
 
 @media (max-width: 410px) {
+  /* .fileContainer {
+  padding-top: 60px;
+  } */
   .fileContainerGallery {
     width: 95%;
     margin-left: auto;
