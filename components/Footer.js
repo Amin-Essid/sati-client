@@ -10,13 +10,16 @@ export default function Footer() {
   return (
     <div className={styles.footerContainer}>
       <div>
-        <Link href="#">
+        <a
+          href="https://www.facebook.com/%D8%B3%D8%A7%D8%AA%D9%8A-100262371669071"
+          target="_blank"
+        >
           <div>
             <Image src={fb} alt="fb" />
           </div>
-        </Link>
+        </a>
       </div>
-      <div>
+      {/* <div>
         <Link href="#">
           <div>
             <Image src={instagram} alt="instagram" />
@@ -29,6 +32,17 @@ export default function Footer() {
             <Image src={wp} alt="wp" />
           </div>
         </Link>
+      </div> */}
+      <div
+        style={{
+          width: "100px",
+          color: "white",
+          direction: "ltr",
+          height: "20px",
+          fontSize: "18px",
+        }}
+      >
+        99062561
       </div>
     </div>
   );
