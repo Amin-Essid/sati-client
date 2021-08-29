@@ -11,6 +11,11 @@ export default function HeadTags({ title, description, image }) {
         <title>sati</title>
         <link rel="icon" href="/logo.png" />
 
+        <meta
+          name="google-site-verification"
+          content="fXwWHNOb0HURY2FKxDTetYODAhsn3NVUQk1sThTwkzc"
+        />
+
         <meta name="description" content={description} />
         <meta name="image" content={image} />
         <meta
